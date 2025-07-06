@@ -7,6 +7,7 @@ import s3AboutImage from "@/app/assets/s3AboutImage.jpg";
 import Navbar from "./components/Navbar";
 import Team from "./components/Team";
 import  Footer  from "../components/footer";
+import Founders from "./components/Founders";
 export default function Home() {
   return (
   <main className="min-h-screen bg-neutral-50 mask-alpha flex flex-col ">
@@ -91,6 +92,7 @@ export default function Home() {
         <Team />
       </div>
     </div>
+    <Founders/>
     <Footer/>
   </main>
   );
