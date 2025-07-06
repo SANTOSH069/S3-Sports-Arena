@@ -1,103 +1,97 @@
+"use client";
+import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
+import { BoxReveal } from "@/components/magicui/box-reveal";
+import {motion} from "framer-motion";
 import Image from "next/image";
-
+import s3AboutImage from "@/app/assets/s3AboutImage.jpg";
+import Navbar from "./components/Navbar";
+import Team from "./components/Team";
+import  Footer  from "../components/footer";
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+  <main className="min-h-screen bg-neutral-50 mask-alpha flex flex-col ">
+    <Navbar />
+    <div className="mt-36 flex flex-col items-center text-center">
+    <motion.div 
+    initial={{filter: "blur(10px)", opacity: 0, y: 12}} 
+    animate={{filter: "blur(0px)", opacity: 1, y: 0}} 
+    transition={{duration: 0.5 , delay: 0.1}}
+    className="mb-2 flex rounded-4xl bg-blue-200/25 p-2 pr-4 pl-4 text-center text-sm font-medium"><span className="pr-2 font-bold tracking-tighter text-blue-800">500+</span> Active Bookings everyday</motion.div>
+    <motion.div 
+    initial={{filter: "blur(10px)", opacity: 0, y: 12}} 
+    animate={{filter: "blur(0px)", opacity: 1, y: 0}} 
+    transition={{duration: 0.5 , delay: 0.1}} 
+    className="text-4xl font-bold tracking-tight">Step into the World of Sports Andhra Pradeshs</motion.div>
+    <motion.div 
+    initial={{filter: "blur(10px)", opacity: 0, y: 12}} 
+    animate={{filter: "blur(0px)", opacity: 1, y: 0}} 
+    transition={{duration: 0.5 , delay: 0.2}}
+    className="text-4xl font-bold tracking-tight">first centralised<span className="text-blue-800 ml-2">AC</span> badminton stadium</motion.div>
+    <motion.div
+    initial={{filter: "blur(10px)", opacity: 0, y: 12}} 
+    animate={{filter: "blur(0px)", opacity: 1, y: 0}} 
+    transition={{duration: 0.5 , delay: 0.3}}
+    className="mt-4 flex flex-col items-center justify-center gap-4 md:flex-row">
+      <button className="item-center transitin-all flex cursor-pointer rounded-sm hover:rounded-2xl bg-blue-400 hover:bg-blue-700  p-2 pl-4 pr-4 text-center font-medium transition-colors duration-150 ease-in-out hover:text-neutral-200">
+        About Us</button>
+      <button className="h cursor-pointer rounded-md border-black bg-black p-2 pr-4 font-medium text-white transition-all duration-150 ease-in-out hover:border-black hover:text-neutral-200">
+        Get Started &rarr;</button>
+    </motion.div>
+  </div>
+  <motion.div 
+  
+  initial={{filter: "blur(10px)", opacity: 0, y: 12}} 
+  animate={{filter: "blur(0px)", opacity: 1, y: 0}} 
+  transition={{duration: 0.5 , delay: 0.12}} 
+  className="mt-6 flex w-full min-h-[200px] items-center justify-center">
+      <HeroVideoDialog
+        className="block dark:hidden"
+        animationStyle="from-center"
+        videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
+        thumbnailSrc="https://startup-template-sage.vercel.app/hero-light.png"
+        thumbnailAlt="Hero Video"
+      />
+  </motion.div>
+  <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1, scale: 1.1 }} transition={{ duration: 0.5 }} viewport={{ once: true }} className="relative mt-20 flex w-full justify-center items-center bg-gradient-to-br from-blue-50 via-white to-blue-100 py-16 px-4 md:px-0 mask-alpha">
+    <div className="max-w-5xl w-full flex flex-col md:flex-row items-center justify-between gap-12 md:gap-20 bg-white/80 rounded-3xl shadow-xl p-8 md:p-16 border border-blue-100">
+      <div className="flex-1 flex flex-col items-start justify-center">
+        <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-blue-900 mb-4 flex items-center">
+            About Us
+            <span className="ml-2 text-[#5046e6] text-5xl md:text-6xl">.</span>
+          </h2>
+        </BoxReveal>
+        <p className="text-lg md:text-xl font-medium tracking-tight text-gray-700 mb-6 leading-relaxed">
+          S3 Sports Arena is a <span className="text-blue-700 font-semibold">premier badminton stadium</span> located in Andhra Pradesh, India.<br/>
+          Our state-of-the-art facility features <span className="text-blue-700 font-semibold">10 international standard courts</span>, ensuring an exceptional playing experience for athletes of all levels.<br/>
+          With a focus on promoting the sport and providing top-notch amenities, we are dedicated to fostering a vibrant badminton community in the region.
+        </p>
+        <ul className="mb-6 space-y-2 text-base md:text-lg text-gray-600">
+          <li className="flex items-center gap-2"><span className="inline-block w-2 h-2 bg-blue-700 rounded-full"></span> International Standard Courts</li>
+          <li className="flex items-center gap-2"><span className="inline-block w-2 h-2 bg-blue-700 rounded-full"></span> Centralized AC Facility</li>
+          <li className="flex items-center gap-2"><span className="inline-block w-2 h-2 bg-blue-700 rounded-full"></span> Professional Coaching</li>
+          <li className="flex items-center gap-2"><span className="inline-block w-2 h-2 bg-blue-700 rounded-full"></span> Spacious Parking & Modern Amenities</li>
+        </ul>
+        <button className="mt-2 rounded-lg bg-blue-700 px-6 py-2 text-white font-semibold shadow-md hover:bg-blue-800 transition">Learn More</button>
+      </div>
+      <div className="flex-1 flex items-center justify-center">
+        <motion.div 
+        initial={{ filter: "blur(10px)", opacity: 0, y: 12}} 
+        animate={{ filter: "blur(0px)", opacity: 1, y: 0}} 
+        transition={{ duration: 0.5 , delay: 0.1}} 
+        className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-lg border-4 border-blue-100 bg-white">
+          <Image src={s3AboutImage} alt="S3 Sports Arena" fill style={{objectFit: 'cover'}} className="" />
+        </motion.div>
+      </div>
+    
     </div>
+  </motion.section>
+    <div className="w-full flex justify-center items-center">
+      <div className="max-w-5xl w-full flex flex-col items-center mb-70">
+        <Team />
+      </div>
+    </div>
+    <Footer/>
+  </main>
   );
 }
